@@ -41,3 +41,8 @@ with(subset(plotMelt, variable == "Sub_metering_2"), lines(DateTime,value,type="
 with(subset(plotMelt, variable == "Sub_metering_3"), lines(DateTime,value,type="l",col="blue"))
 legend("topright", inset=0.01,box.lty=0, cex=0.75, col = c("black", "red", "blue"), lty=1, legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 with(plotData, plot(DateTime, Global_reactive_power, type="l", ylab="Global_reactive_power", xlab="datetime"))
+
+
+dev.copy(png, file = "plot4.png")
+
+dev.off()

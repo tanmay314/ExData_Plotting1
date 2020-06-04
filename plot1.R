@@ -12,6 +12,8 @@ plotData[,1] <- dmy(plotData[,1])
 
 plotData[,"Global_active_power"] <- as.numeric(as.character((plotData[,"Global_active_power"])))
 
+par(mfrow=c(1,1), mar=c(5.1, 4.1, 4.1, 2.1))
+
 hist(plotData$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", col="red")
 
 dev.copy(png, file = "plot1.png")
